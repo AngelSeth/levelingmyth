@@ -1,13 +1,16 @@
 package mythcore.levelingcore;
 
+import mythcore.levelingcore.blocks.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.render.RenderLayer;
 
 
 public class SoloLevelingClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
-		//BlockRenderLayerMap.I
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANA_CRYSTAL, RenderLayer.getCutoutMipped());
 
 	}
 }
