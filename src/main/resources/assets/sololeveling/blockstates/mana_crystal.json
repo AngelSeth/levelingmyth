@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "sololeveling:block/mana_crystal",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "sololeveling:block/mana_crystal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sololeveling:block/mana_crystal",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "sololeveling:block/mana_crystal",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "sololeveling:block/mana_crystal"
+    },
+    "facing=west": {
+      "model": "sololeveling:block/mana_crystal",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
