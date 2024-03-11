@@ -7,7 +7,7 @@ import net.minecraft.block.Blocks;
 
 public class ManaCrystalBlock extends AmethystClusterBlock {
     public ManaCrystalBlock() {
-        super(1, 1, Settings.copy(Blocks.AMETHYST_CLUSTER));
+        super(1, 1, Settings.copy(Blocks.AMETHYST_CLUSTER).luminance((state) -> 9));
     }
 
 
