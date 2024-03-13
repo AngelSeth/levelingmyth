@@ -11,6 +11,8 @@ public class ModItems {
 
     //public static final Item ANTHILL = registerItem("anthill", new Item(new FabricItemSettings()));
     public static final Item CRYSTAL_SHARD = registerItem("crystal_shard", new Item(new FabricItemSettings()));
+    public static final Item CRYSTAL_BALL = registerItem("crystal_ball", new Item(new FabricItemSettings()));
+    public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot", new Item(new FabricItemSettings()));
 
 
 

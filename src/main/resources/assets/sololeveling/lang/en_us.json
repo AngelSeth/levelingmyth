@@ -1,6 +1,13 @@
 {
   "item.sololeveling.crystal_shard": "Mana Crystal Shard",
+  "item.sololeveling.crystal_ball": "Crystal Ball",
+  "item.sololeveling.mythril_ingot": "Mythril Ingot",
+
+
   "block.sololeveling.mana_crystal": "Mana Crystal",
+  "block.sololeveling.mythril_ore": "Mythril Ore",
+  "block.sololeveling.mythril_block": "Mythril Block",
+  "block.sololeveling.magic_furnace": "Magic Furnace",
 
   "itemgroup.sololeveling": "Solo Leveling"
 }

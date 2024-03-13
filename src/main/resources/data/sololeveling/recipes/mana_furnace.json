@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "sololeveling:mythril_ingot"
+    },
+    "&": {
+      "item": "minecraft:blast_furnace"
+    },
+    "%": {
+      "item": "sololeveling:crystal_shard"
+    }
+  },
+  "pattern": [
+    "#%#",
+    "%&%",
+    "#%#"
+  ],
+  "result": {
+    "item": "sololeveling:mana_furnace"
+  }
+}

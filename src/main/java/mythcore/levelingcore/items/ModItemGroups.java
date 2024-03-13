@@ -16,6 +16,11 @@ public class ModItemGroups {
                 //entries.add(ModItems.ITEM);
                 entries.add(ModItems.CRYSTAL_SHARD);
                 entries.add(ModBlocks.MANA_CRYSTAL);
+                entries.add(ModItems.CRYSTAL_BALL);
+                entries.add(ModItems.MYTHRIL_INGOT);
+                entries.add(ModBlocks.MYTHRIL_BLOCK);
+                entries.add(ModBlocks.MYTHRIL_ORE);
+                entries.add(ModBlocks.MANA_FURNACE);
             }).build());
     public static void registerItemGroups(){
         SoloLeveling.LOGGER.info("Registering Item Groups for " + SoloLeveling.MOD_ID);
