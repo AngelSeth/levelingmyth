@@ -18,8 +18,7 @@ public class ManaFurnaceScreen extends HandledScreen<ManaFurnaceScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        titleY = 1000;
-        playerInventoryTitleY = 1000;
+        titleY = 10;
     }
 
     @Override

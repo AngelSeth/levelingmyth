@@ -14,6 +14,7 @@ public class ModItemGroups {
     public static final ItemGroup LEVELING_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(SoloLeveling.MOD_ID, "sololeveling"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sololeveling")).icon(() -> new ItemStack(ModItems.CRYSTAL_SHARD)).entries((displayContext, entries) -> {
                 //entries.add(ModItems.ITEM);
+                entries.add(ModItems.MAGIC_DUST);
                 entries.add(ModItems.CRYSTAL_SHARD);
                 entries.add(ModBlocks.MANA_CRYSTAL);
                 entries.add(ModItems.CRYSTAL_BALL);

@@ -32,8 +32,10 @@ public class ManaFurnaceScreenHandler extends ScreenHandler {
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = (ManaFurnaceBlockEntity) blockEntity;
 
-        this.addSlot(new Slot(inventory, 0, 78, 16));
-        this.addSlot(new Slot(inventory, 1, 78, 57));
+        this.addSlot(new Slot(inventory, 0, 79, 17));
+        this.addSlot(new Slot(inventory, 1, 79, 58));
+        this.addSlot(new Slot(inventory, 2, 17, 17));
+        this.addSlot(new Slot(inventory, 3, 102, 51));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
