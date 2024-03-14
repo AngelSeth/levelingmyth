@@ -32,7 +32,7 @@ public class ManaFurnaceBlockEntity extends BlockEntity implements ExtendedScree
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
 
     public ManaFurnaceBlockEntity(BlockPos pos, BlockState state) {
 
@@ -57,7 +57,7 @@ public class ManaFurnaceBlockEntity extends BlockEntity implements ExtendedScree
 
             @Override
             public int size() {
-                return 2;
+                return 4;
             }
         };
     }
@@ -125,9 +125,17 @@ public class ManaFurnaceBlockEntity extends BlockEntity implements ExtendedScree
 
     private void craftItem() {
         this.removeStack(INPUT_SLOT, 1);
+        this.removeStack(FUEL_SLOT, 1);
         ItemStack result = new ItemStack(ModItems.IMPURE_MYTHRIL_INGOT);
-
+        ItemStack dust = new ItemStack(ModItems.MAGIC_DUST);
         this.setStack(MAIN_OUTPUT, new ItemStack(result.getItem(), getStack(MAIN_OUTPUT).getCount() + result.getCount()));
+        this.setStack(EXTRA_OUTPUT, new ItemStack(dust.getItem(), getStack(EXTRA_OUTPUT).getCount() + dust.getCount()));
+    }
+
+    private void useFuel() {
+        this.removeStack(FUEL_SLOT, 1);
+        ItemStack result = new ItemStack(ModItems.MAGIC_DUST);
+        this.setStack(EXTRA_OUTPUT, new ItemStack(result.getItem(), getStack(EXTRA_OUTPUT).getCount() + result.getCount()));
     }
 
     private boolean hasCraftingFinished() {
@@ -141,8 +149,8 @@ public class ManaFurnaceBlockEntity extends BlockEntity implements ExtendedScree
     private boolean hasRecipe() {
         ItemStack result = new ItemStack(ModItems.IMPURE_MYTHRIL_INGOT);
         boolean hasInput = getStack(INPUT_SLOT).getItem() == ModItems.RAW_MYTHRIL;
-
-        return hasInput && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
+        boolean hasFuel = getStack(FUEL_SLOT).getItem() == ModItems.CRYSTAL_SHARD;
+        return hasInput && hasFuel && canInsertAmountIntoOutputSlot(result) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -156,4 +164,5 @@ public class ManaFurnaceBlockEntity extends BlockEntity implements ExtendedScree
     private boolean isOutputSlotEmptyOrReceivable() {
         return this.getStack(MAIN_OUTPUT).isEmpty() || this.getStack(MAIN_OUTPUT).getCount() < this.getStack(MAIN_OUTPUT).getMaxCount();
     }
+
 }

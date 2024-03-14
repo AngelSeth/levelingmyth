@@ -21,12 +21,12 @@ public class ManaFurnaceScreenHandler extends ScreenHandler {
 
     public ManaFurnaceScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
-                new ArrayPropertyDelegate(2));
+                new ArrayPropertyDelegate(4));
     }
 
     public ManaFurnaceScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate){
         super(ModScreenHandlers.MANA_FURNACE_SCREEN_HANDLER, syncId);
-        checkSize((Inventory) blockEntity, 2);
+        checkSize((Inventory) blockEntity, 4);
         this.inventory = (Inventory) blockEntity;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = arrayPropertyDelegate;

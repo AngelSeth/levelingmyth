@@ -18,7 +18,6 @@ public class ManaFurnaceScreen extends HandledScreen<ManaFurnaceScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        titleY = 10;
     }
 
     @Override
@@ -37,7 +36,7 @@ public class ManaFurnaceScreen extends HandledScreen<ManaFurnaceScreenHandler> {
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
             context.drawTexture(TEXTURE, x + 100, y + 17, 181, 0, 7, handler.getScaledProgress());
-            context.drawTexture(TEXTURE, x + 60, y + 43, 0, 172, handler.getScaledProgressMana(), 4);
+            context.drawTexture(TEXTURE, x + 60, y + 44, 0, 172, handler.getScaledProgressMana(), 4);
         }
     }
 
