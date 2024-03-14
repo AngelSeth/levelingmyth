@@ -20,7 +20,7 @@ public class ModBlocks {
     public static final Block MANA_CRYSTAL = registerBlock("mana_crystal", new ManaCrystalBlock());
     public static final Block MYTHRIL_ORE = registerBlock("mythril_ore", new MythrilOreBlock());
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block", new MythrilBlock());
-    public static final Block MANA_FURNACE = registerBlock("mana_furnace", new ManaFurnaceBlock());
+    public static final Block MANA_FURNACE = registerBlock("mana_furnace", new ManaFurnaceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

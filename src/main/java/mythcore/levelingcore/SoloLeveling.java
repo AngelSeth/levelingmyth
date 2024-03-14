@@ -1,8 +1,10 @@
 package mythcore.levelingcore;
 
 import mythcore.levelingcore.blocks.ModBlocks;
+import mythcore.levelingcore.blocks.entities.ModBlockEntities;
 import mythcore.levelingcore.items.ModItemGroups;
 import mythcore.levelingcore.items.ModItems;
+import mythcore.levelingcore.screens.ModScreenHandlers;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +20,7 @@ public class SoloLeveling implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
 	}
 }

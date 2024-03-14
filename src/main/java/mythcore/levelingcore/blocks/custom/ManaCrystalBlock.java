@@ -2,13 +2,17 @@ package mythcore.levelingcore.blocks.custom;
 
 
 import net.minecraft.block.AmethystClusterBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.shape.VoxelShape;
 
 
 public class ManaCrystalBlock extends AmethystClusterBlock {
     public ManaCrystalBlock() {
         super(1, 1, Settings.copy(Blocks.AMETHYST_CLUSTER).luminance((state) -> 9));
     }
+
+    //private static VoxelShape Shape = Block.createCuboidShape(0, 0, 0, )
 
 
 
