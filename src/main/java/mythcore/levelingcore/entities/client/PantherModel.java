@@ -34,7 +34,7 @@ public class PantherModel<T extends PantherEntity> extends SinglePartEntityModel
 
 		ModelPartData tail3 = tail.addChild("tail3", ModelPartBuilder.create().uv(0, 0).cuboid(-1.0F, -1.0F, -3.5F, 2.0F, 2.0F, 7.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -18.0F, 25.5F));
 
-		ModelPartData head = torso.addChild("head", ModelPartBuilder.create().uv(0, 27).cuboid(-3.0F, -20.0F, -18.5F, 6.0F, 6.0F, 7.5F, new Dilation(0.0F))
+		ModelPartData head = torso.addChild("head", ModelPartBuilder.create().uv(0, 27).cuboid(-3.0F, -20.0F, -18.5F, 6.0F, 6.0F, 9.0F, new Dilation(0.0F))
 				.uv(21, 27).cuboid(-2.0F, -17.0F, -21.0F, 4.0F, 3.0F, 2.5F, new Dilation(0.0F))
 				.uv(48, 4).cuboid(-3.0F, -22.0F, -15.0F, 2.0F, 2.0F, 2.5F, new Dilation(0.0F))
 				.uv(48, 4).cuboid(1.0F, -22.0F, -15.0F, 2.0F, 2.0F, 2.5F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0F, 0F));

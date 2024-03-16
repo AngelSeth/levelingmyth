@@ -22,7 +22,11 @@ public class PantherRenderer extends MobEntityRenderer<PantherEntity, PantherMod
 
     @Override
     public void render(PantherEntity mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-
+        if(mobEntity.isAttacking()) {
+            matrixStack.scale(1.1f, 1.1f, 1.1f);
+        } else {
+            matrixStack.scale(1f, 1f, 1f);
+        }
 
         super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
