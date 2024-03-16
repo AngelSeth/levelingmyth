@@ -1,5 +1,6 @@
 package mythcore.levelingcore.entities.custom;
 
+import mythcore.levelingcore.entities.ai.goals.TeleportToTargetGoal;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -51,10 +52,11 @@ public class PantherEntity extends HostileEntity {
 
     @Override
     public void tick() {
-        super.tick();
+        System.out.println("Panther Tick: " + this.getId());
         if(this.getWorld().isClient){
             updateAnimations();
         }
+        super.tick();
     }
 
     @Override
@@ -62,12 +64,13 @@ public class PantherEntity extends HostileEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         //this.goalSelector.add(1, new AvoidSunlightGoal(this));
         //this.goalSelector.add(2, new TeleportToTargetGoal(this));
-        //this.goalSelector.add(1, new MeleeAttackGoal(this, 1.2, false));
-        this.goalSelector.add(2, new WanderAroundFarGoal(this, 1.0));
-        //this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(3, new LookAroundGoal(this));
-        //this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
-        //this.targetSelector.add(2, new PantherEntity.TargetGoal(this, PlayerEntity.class));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.2, false));
+        this.goalSelector.add(1, new TeleportToTargetGoal(this, 2));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(2, new PantherEntity.TargetGoal(this, PlayerEntity.class));
         //this.targetSelector.add(2, new RevengeGoal(this, new Class[0]));
         //this.targetSelector.add(3, new ActiveTargetGoal(this, EndermiteEntity.class, true, false));
         //this.targetSelector.add(4, new UniversalAngerGoal(this, true));
@@ -76,7 +79,7 @@ public class PantherEntity extends HostileEntity {
     public static DefaultAttributeContainer.Builder createPantherAttribute(){
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 25)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, .1)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, .25)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3);
     }
 
