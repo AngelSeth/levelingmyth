@@ -1,6 +1,6 @@
 package mythcore.levelingcore.entities.custom;
 
-import mythcore.levelingcore.blocks.entities.ModEntities;
+import mythcore.levelingcore.entities.ModEntities;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;

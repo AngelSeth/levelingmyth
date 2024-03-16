@@ -1,4 +1,4 @@
-package mythcore.levelingcore.entities;
+package mythcore.levelingcore.entities.client;
 
 import mythcore.levelingcore.entities.custom.PantherEntity;
 import net.minecraft.client.model.*;
@@ -12,23 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class PantherModel<T extends PantherEntity> extends SinglePartEntityModel<T> {
 	private final ModelPart body;
 	private final ModelPart head;
-	/*private final ModelPart torso;
-	private final ModelPart tail;
-	private final ModelPart tail1;
-	private final ModelPart tail2;
-	private final ModelPart tail3;
-	private final ModelPart backLegL;
-	private final ModelPart backlegTL;
-	private final ModelPart backlegBL;
-	private final ModelPart backLegR;
-	private final ModelPart backlegTR;
-	private final ModelPart backlegBR;
-	private final ModelPart frontLegL;
-	private final ModelPart frontlegTL;
-	private final ModelPart frontlegBL;
-	private final ModelPart frontLegR;
-	private final ModelPart frontlegTR;
-	private final ModelPart frontlegBR;*/
+
 	public PantherModel(ModelPart root) {
 		this.body = root.getChild("body");
 		this.head = body.getChild("body").getChild("torso").getChild("head");

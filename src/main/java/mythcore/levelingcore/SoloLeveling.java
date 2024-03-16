@@ -2,7 +2,7 @@ package mythcore.levelingcore;
 
 import mythcore.levelingcore.blocks.ModBlocks;
 import mythcore.levelingcore.blocks.entities.ModBlockEntities;
-import mythcore.levelingcore.blocks.entities.ModEntities;
+import mythcore.levelingcore.entities.ModEntities;
 import mythcore.levelingcore.entities.custom.PantherEntity;
 import mythcore.levelingcore.items.ModItemGroups;
 import mythcore.levelingcore.items.ModItems;

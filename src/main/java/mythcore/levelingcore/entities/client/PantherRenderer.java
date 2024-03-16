@@ -1,7 +1,6 @@
 package mythcore.levelingcore.entities.client;
 
 import mythcore.levelingcore.SoloLeveling;
-import mythcore.levelingcore.entities.PantherModel;
 import mythcore.levelingcore.entities.custom.PantherEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -11,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class PantherRenderer extends MobEntityRenderer<PantherEntity, PantherModel<PantherEntity>> {
 
-    private static final Identifier TEXTURE = new Identifier(SoloLeveling.MOD_ID, "textures/entity/panther_base.png");
+    private static final Identifier TEXTURE = new Identifier(SoloLeveling.MOD_ID, "textures/entity/panther.png");
     public PantherRenderer(EntityRendererFactory.Context context) {
         super(context, new PantherModel<>(context.getPart(ModModelLayers.PANTHER)), 1.0f);
     }

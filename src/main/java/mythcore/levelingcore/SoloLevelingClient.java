@@ -1,8 +1,8 @@
 package mythcore.levelingcore;
 
 import mythcore.levelingcore.blocks.ModBlocks;
-import mythcore.levelingcore.blocks.entities.ModEntities;
-import mythcore.levelingcore.entities.PantherModel;
+import mythcore.levelingcore.entities.ModEntities;
+import mythcore.levelingcore.entities.client.PantherModel;
 import mythcore.levelingcore.entities.client.ModModelLayers;
 import mythcore.levelingcore.entities.client.PantherRenderer;
 import mythcore.levelingcore.screens.ManaFurnaceScreen;
@@ -18,10 +18,8 @@ import net.minecraft.client.render.RenderLayer;
 public class SoloLevelingClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANA_CRYSTAL, RenderLayer.getCutoutMipped());
 		HandledScreens.register(ModScreenHandlers.MANA_FURNACE_SCREEN_HANDLER, ManaFurnaceScreen::new);
-
 		EntityRendererRegistry.register(ModEntities.PANTHER, PantherRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PANTHER, PantherModel::getTexturedModelData);
 	}
